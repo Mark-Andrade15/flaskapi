@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: flask-api
-          image: markandrade15/flask-api:latest
+          image: markandrade15/flask-api:19933a1b75ad51a69a43714d93914b3ecd155b12
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
