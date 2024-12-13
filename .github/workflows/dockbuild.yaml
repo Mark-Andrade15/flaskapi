@@ -24,9 +24,9 @@ jobs:
           docker tag flask-api:${{github.sha}} markandrade15/flask-api:${{github.sha}}
           docker push markandrade15/flask-api:${{github.sha}}
 
-          - name: Update Deployment Manifest
-          run: |
-            sed -i "s|image: markandrade15/flask-api:.*|image: markandrade15/flask-api:${{ github.sha }}|" service.yaml
+      - name: Update Deployment Manifest
+        run: |
+          sed -i "s|image: markandrade15/flask-api:.*|image: markandrade15/flask-api:${{ github.sha }}|" service.yaml
 
       - name: Commit and Push Changes
         run: |
